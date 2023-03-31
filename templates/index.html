@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>House Price Estimator</h1>
+    <form action="{{url_for('predict')}}" method="post">
+        <div class="form-group">
+            <label for='rooms' class="form-label">Rooms</label>
+            <input type='number' name="rooms" class="form-control" id="rooms">
+        </div>
+        <div class="form-group">
+            <label for='distance' class="form-label">Distance</label>
+            <input type='number' name="distance" class="form-control" id="distance">
+        </div>
+        <div class="form-group">
+            <label for='bathroom' class="form-label">Bathroom</label>
+            <input type='number' name="bathroom" class="form-control" id="bathroom">
+        </div>
+        <div class="form-group">
+            <label for='landsize' class="form-label">LandSize</label>
+            <input type='number' name="landsize" class="form-control" id="landsize">
+        </div>
+        <div class="form-group">
+            <label for='buildingarea' class="form-label">BuildingArea</label>
+            <input type='number' name="buildingarea" class="form-control" id="buildingarea">
+        </div>
+        <div class="form-group">
+            <label for='yearbuilt' class="form-label">YearBuilt</label>
+            <input type='number' name="yearbuilt" class="form-control" id="yearbuilt">
+        </div>
+        <button type="submit">Predict</button>
+    </form>
+    <h3><br>{{prediction_text}}</h3>
+</body>
+
+</html>
