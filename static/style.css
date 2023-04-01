@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-group{
+    width: 50%;
+}
+
+label{
+    text-align: center;
+    font-size: 25px;
+}
+/* input[type="number"]{
+    border: 2px solid red;
+} */

@@ -6,37 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
 </head>
 <body>
+    <div class="container">
     <h1>House Price Estimator</h1>
+    <hr>
     <form action="{{url_for('predict')}}" method="post">
+
         <div class="form-group">
             <label for='rooms' class="form-label">Rooms</label>
             <input type='number' name="rooms" class="form-control" id="rooms">
-        </div>
-        <div class="form-group">
+        
             <label for='distance' class="form-label">Distance</label>
             <input type='number' name="distance" class="form-control" id="distance">
-        </div>
-        <div class="form-group">
+       
+     
             <label for='bathroom' class="form-label">Bathroom</label>
             <input type='number' name="bathroom" class="form-control" id="bathroom">
-        </div>
-        <div class="form-group">
+        
+      
             <label for='landsize' class="form-label">LandSize</label>
             <input type='number' name="landsize" class="form-control" id="landsize">
-        </div>
-        <div class="form-group">
+      
             <label for='buildingarea' class="form-label">BuildingArea</label>
             <input type='number' name="buildingarea" class="form-control" id="buildingarea">
-        </div>
-        <div class="form-group">
+        
+        
             <label for='yearbuilt' class="form-label">YearBuilt</label>
             <input type='number' name="yearbuilt" class="form-control" id="yearbuilt">
-        </div>
-        <button type="submit">Predict</button>
+
+       <button style="margin-top: 4%;" type="submit" class="btn btn-outline-primary">Predict Price</button>
+
+    </div>
     </form>
     <h3><br>{{prediction_text}}</h3>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
 </body>
 
 </html>
